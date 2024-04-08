@@ -43,6 +43,7 @@
 
 .donationSelector {
   font: 2em sans-serif;
+  background-image: linear-gradient(lightgray, darkgray);
 }
 
 .donationSelector:focus {
