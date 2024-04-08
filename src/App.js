@@ -133,10 +133,18 @@ const App = () => {
   }
   return isMetaMaskAvailable ? (
     <div className="App">
-      <h2>You- {connectedAccount}</h2>
-      <h2>have {`${Number(connectedBalance) / Math.pow(10, 18)}`} Eth</h2>
-      {!!connectedBalance && <h2>{"Please give me some here!"}</h2>}
-      <h2>{connectedBalance}</h2>
+      <div style={{ margin: "10px 0px 0px 0px" }}>
+        You- <b>{connectedAccount}</b>
+      </div>
+      <div>
+        have <b>{`${Number(connectedBalance) / Math.pow(10, 18)}`}</b> Eth
+      </div>
+      {!!connectedBalance && (
+        <div style={{ margin: "0px 0px 10px 0px" }}>
+          {"Please give me some here!"}
+        </div>
+      )}
+      <div>{connectedBalance}</div>
       <div
         style={{
           display: "flex",
