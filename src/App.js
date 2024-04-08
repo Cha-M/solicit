@@ -161,7 +161,7 @@ const App = () => {
       >
         {`${gasPrice}`}
       </button> */}
-      <h2>You ({connectedAccount})</h2>
+      <h2>You- {connectedAccount}</h2>
       <h2>have {`${Number(connectedBalance) / Math.pow(10, 18)}`} eth</h2>
       {!!connectedBalance && <h2>{"Please give me some here!"}</h2>}
       <h2>{connectedBalance}</h2>
@@ -174,6 +174,7 @@ const App = () => {
             font: "1.5em sans-serif",
           }}
           type="number"
+          min="0"
           value={amountToDonate}
           onChange={(e) => setAmountToDonate(e.target.value)}
         />
