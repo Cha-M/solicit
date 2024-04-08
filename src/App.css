@@ -1,15 +1,16 @@
 .App {
   text-align: center;
+  min-height: 100vh;
 }
 
-.App-logo {
+.Fox {
   height: 40vmin;
   pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 2s linear;
+  .Fox {
+    animation: Fox-scale infinite 2s linear;
   }
 }
 
@@ -28,7 +29,7 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+@keyframes Fox-scale {
   from {
     transform: scale(1);
   }
@@ -44,13 +45,16 @@
   font: 2em sans-serif;
 }
 
+.donationSelector:focus {
+}
+
 .donateButton {
   border: "2px gray solid";
   background-color: "gray";
   /* border-top-right-radius: "20px"; */
   padding: "20px";
-  background-image: linear-gradient(rgb(50, 116, 94), darkgray);
+  background-image: linear-gradient(rgb(40, 89, 109), darkgray);
 }
 .donateButton:hover {
-  background-image: linear-gradient(aquamarine, gray);
+  background-image: linear-gradient(rgb(127, 219, 255), gray);
 }
