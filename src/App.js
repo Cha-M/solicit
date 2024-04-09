@@ -139,11 +139,11 @@ const App = () => {
       <div>
         have <b>{`${Number(connectedBalance) / Math.pow(10, 18)}`}</b> Eth
       </div>
-      {!!connectedBalance && (
-        <div style={{ margin: "0px 0px 10px 0px" }}>
+      {!!connectedBalance ? (
+        <div style={{ margin: "0px 0px 12px 0px" }}>
           {"Please give me some here!"}
         </div>
-      )}
+      ) : null}
       <div>{connectedBalance}</div>
       <div
         style={{
@@ -163,11 +163,6 @@ const App = () => {
 
         <button
           className="donateButton"
-          style={{
-            borderRadius: "0px 30px 30px 0px",
-            padding: "10px",
-            font: "1em sans-serif",
-          }}
           onClick={async () => {
             handleClickDonate(amountToDonate);
           }}

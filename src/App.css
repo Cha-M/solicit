@@ -55,6 +55,9 @@
   border: 1px gray solid;
   /* border-top-right-radius: "20px"; */
   background-image: linear-gradient(rgb(40, 89, 109), darkgray);
+  border-radius: 0px 30px 30px 0px;
+  padding: 10px;
+  font: 1em sans-serif;
 }
 .donateButton:hover {
   background-image: linear-gradient(rgb(127, 219, 255), gray);
