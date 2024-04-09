@@ -84,10 +84,6 @@ const App = () => {
   const [amountToDonate, setAmountToDonate] = useState(0);
 
   useEffect(() => {
-    console.log(amountToDonate, "eth to donate");
-  }, [amountToDonate]);
-
-  useEffect(() => {
     const connectAndReadAccount = async () => {
       if (window.ethereum) {
         try {
@@ -101,7 +97,6 @@ const App = () => {
           const _connectedBalance = await web3.eth.getBalance(
             _connectedAccount
           );
-          console.log(`Connected balance is ${_connectedBalance}`);
           setConnectedBalance(_connectedBalance);
           setAmountToDonate(Number(_connectedBalance) / Math.pow(10, 18) / 10);
         } catch (err) {
@@ -156,6 +151,9 @@ const App = () => {
         <input
           className="donationSelector"
           type="number"
+          onKeyUp={(e) =>
+            e.code === "Enter" && handleClickDonate(amountToDonate)
+          }
           min="0"
           value={amountToDonate}
           onChange={(e) => setAmountToDonate(e.target.value)}
