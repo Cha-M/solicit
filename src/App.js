@@ -125,7 +125,7 @@ const App = () => {
         </h1>
         <img
           src={MetaMaskFox}
-          className="App-logo"
+          className="Fox"
           alt="The MetaMask fox logo, a fox mask"
         />
       </div>
@@ -187,7 +187,7 @@ const App = () => {
       <h1>Please connect your account to continue...</h1>
       <img
         src={MetaMaskFox}
-        className="App-logo"
+        className="Fox"
         alt="The MetaMask fox logo, a fox mask"
       />
     </div>
