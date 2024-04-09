@@ -154,12 +154,7 @@ const App = () => {
         }}
       >
         <input
-          style={{
-            padding: "10px",
-            borderRadius: "30px 0px 0px 30px",
-            paddingInline: "20px 0px",
-            font: "1.5em sans-serif",
-          }}
+          className="donationSelector"
           type="number"
           min="0"
           value={amountToDonate}
@@ -167,7 +162,6 @@ const App = () => {
         />
 
         <button
-          disabled={amountToDonate <= 0}
           className="donateButton"
           style={{
             borderRadius: "0px 30px 30px 0px",
