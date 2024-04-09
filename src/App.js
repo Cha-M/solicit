@@ -183,7 +183,7 @@ const App = () => {
       </div>
     </div>
   ) : (
-    <div>
+    <div className="App">
       <h1>Please connect your account to continue...</h1>
       <img
         src={MetaMaskFox}
